@@ -1,0 +1,40 @@
+<!--pages/oneScoreOneRank/index.wxml-->
+<view class="center_one" style="z-index: 2; height:{{navHeight}}px; background:#ffffff; position: sticky; top:0rpx">  
+    <picker mode="selector" bindchange="choose_province" value="{{province_index}}" range="{{province_array}}">
+        <view class="weui-picker">
+            <text>省份: \n{{province_array[province_index]}}</text>
+        </view>
+    </picker>
+    <picker mode="selector" bindchange="choose_year" value="{{year_index}}" range="{{year_arr}}">
+        <view class="weui-picker">
+            <text>年份: \n{{year_arr[year_index]}}</text>
+        </view>
+    </picker>
+    <picker mode="selector" bindchange="choose_student_type" value="{{show_student_type_index}}" range="{{show_student_type_arr}}">
+        <view class="weui-picker">
+            <text>类别: \n{{show_student_type_arr[show_student_type_index]}}</text>
+        </view>
+    </picker>
+    <picker mode="selector" bindchange="choose_level" value="{{show_level_index}}" range="{{show_level_arr}}">
+        <view class="weui-picker">
+            <text>层次: \n{{show_level_arr[show_level_index]}}</text>
+        </view>
+    </picker>
+</view>
+
+<view class="center_two" style="z-index: 1;">
+    <s-table config="{{tableConfig}}" rows="{{show_page}}" headers="{{headers}}" keys="{{keys}}"></s-table>
+</view>
+
+<view style="text-align: center;">
+    <text class="key_word_block" bindtap="first_page">首页</text>
+    <text class="key_word_block" bindtap="per_page">上一页</text>
+    <text style="margin-left: 5px; margin-right: 5px;">{{page_index+1}}/{{max_page}}</text>
+    <text class="key_word_block" bindtap="next_page">下一页</text>
+    <text class="key_word_block" bindtap="last_page">尾页</text>
+</view>
+<picker bindchange="page_choose" mode="selector" value="{{page_arr}}" range="{{page_arr}}">
+    <view style="text-align: center;">
+        <text class="key_word_block">快速跳转</text>
+    </view>
+</picker>

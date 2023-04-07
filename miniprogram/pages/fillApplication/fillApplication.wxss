@@ -1,0 +1,177 @@
+/* pages/fillApplication.wxss */
+.top_item{
+  z-index: 2;
+}
+
+.title {
+    height:60rpx;
+    background-color: rgb(255, 255, 255);
+    border-top: 1rpx solid #fff;
+    border-bottom: 1rpx solid rgba(204, 204, 204, 1);
+}
+    .title_item {
+    text-align: center;
+    font-size: 30rpx;
+    color: rgb(0, 0, 0);
+  }
+
+.item {
+    display: flex;
+    flex-direction: row;
+  }
+  .head_item {
+    width: 374rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #fff;
+  }
+   
+  .head {
+    height:80rpx;
+    background-color: rgb(81, 169, 204);
+    border-top: 1rpx solid #fff;
+    border-bottom: 1rpx solid rgba(204, 204, 204, 1);
+    display: flex;
+    align-items: center;
+  }
+   
+  .ring {
+    width: 2rpx;
+    height: 100%;
+    background-color: rgba(204, 204, 204, 1);
+  }
+  
+  .arr_infor {
+    z-index: 1;
+  }
+
+  .img {
+    margin: 10rpx 0 10rpx 10rpx;
+  }
+   
+  .school_name {
+    font-size: 20rpx;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    width: 100%;
+  }
+   
+  .introing {
+    display: flex;
+    flex-direction: column;
+    flex: right;
+    margin-right: 30rpx;
+  }
+   
+  .position {
+    margin-top: 20rpx;
+    width: 60%;
+    font-size: 28rpx;
+    font-weight: bold;
+  }
+   
+  .city_name {
+    font-size: 28rpx;
+    color: rgb(24, 59, 153);
+    margin-top: 20rpx;
+  }
+   
+  .nature_type_name {
+    font-size: 25rpx;
+    color: #999;
+    margin-top: 20rpx;
+  }
+   
+  .enroll_infor {
+    font-size: 25rpx;
+    margin-top: 20rpx;
+  }
+
+  
+
+  /* 搬运过来的 */
+  .arrow{
+    display:inline-block;
+    border:6px solid transparent;
+    border-top-color:#000;
+    margin-left:8px;
+    position:relative;
+    top:6rpx;
+   }
+   /* ---------------------------- */
+   /*模态框*/
+   .modal{position:fixed; top:0; right:0; bottom:0; left:0; z-index:1000;}
+   .modal-cancel{position:absolute; z-index:2000; top:0; right:0; bottom: 0; left:0; background:rgba(0,0,0,0.3);}
+   .bottom-dialog-body{height: 60%; width:100%; position:absolute; z-index:3000; bottom:0; left:0;background:#dfdede;}
+   /*动画前初始位置*/
+   .bottom-positon{-webkit-transform:translateY(100%);transform:translateY(100%);}
+     
+     
+    /* 底部弹出框 */
+   .bottom-positon{
+    text-align: center;
+   } 
+  .up_select_arr{
+      margin-bottom: 20rpx;
+      height: 60%;
+      display: flex;
+
+      align-items: flex-start;
+      padding: 10rpx 0;
+      box-sizing: border-box;
+   }
+    .up_select_arr_left {
+      text-align: center;
+      width: 30%;
+      height: 80%;
+      display: flex;
+      flex-direction: row;
+      margin: 5px;
+    }
+    .up_select_arr_left_infor{
+      margin: 5px;
+    }
+    .up_select_arr_mid {
+      width: 10%;
+      height: 80%;
+      margin: 5px;
+    }
+    .jy-item-hover{
+          border:rgb(24, 59, 153);
+    }
+    .up_select_arr_right {
+      text-align: center;
+      width: 60%;
+      height: 80%;
+      margin: 5px;
+    }
+    .up_select_arr_right_infor {
+      text-align: left;
+      display: block;
+      margin: 5px;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+   .bottom_part{
+      height: 10%;
+      display: flex;
+      flex-direction: row;
+      background: #fff;
+      background: #fff;
+   }
+    .bottom_left{
+      width: 40%;
+      flex-direction: row;
+      text-align: center;
+    }
+    .bottom_right{
+      width: 60%;
+      flex-direction: row;
+      text-align:  center;
+    }
+
+.word_choosed{
+  color: rgb(39, 148, 148);
+}

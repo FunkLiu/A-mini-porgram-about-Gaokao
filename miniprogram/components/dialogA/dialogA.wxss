@@ -1,0 +1,158 @@
+/* components/dialogA.wxss */
+/* components/dialog/dialog.wxss */
+/*模态框*/
+/*使屏幕变暗  */
+.background_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.2;
+    overflow: hidden;
+    z-index: 1000;
+    color: #fff;
+  }
+  
+  /*对话框 */
+  .attr_box {
+    background: #FFFFFF;
+    opacity: 1;
+    /* border-radius: 0px 0px 0px 0px; */
+    /* height: 500rpx; */
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    background: #fff;
+    /* background: rgba(66, 66, 66, .6); */
+    padding-top: 40rpx;
+    padding-bottom: 90rpx;
+    box-sizing: border-box;
+  
+  }
+  
+  
+  .dialog-box {
+    width: 100%;
+    height: 100%;
+    /* background-color: pink; */
+  }
+  
+  .dialog-head {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60rpx;
+    /* background-color: rgb(215, 255, 192); */
+  }
+  
+  .dialog-title {
+    width: 80%;
+    height: 100%;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: bold;
+    /* line-height: 40rpx; */
+    color: rgba(0, 0, 0, .9);
+    /* background-color: rgb(255, 254, 192); */
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .close2ImgBox {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .close2Img {
+    width: 44rpx;
+    height: 44rpx;
+  }
+  
+  .dialog-content {
+    height: calc(100% - 60rpx);
+    /* background-color: rgb(192, 237, 255); */
+    box-sizing: border-box;
+    padding: 40rpx 0;
+  }
+  
+  /* 主体内容 */
+  .select-box {
+    /* background-color: rgb(240, 230, 146); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    box-sizing: border-box;
+    padding: 10rpx;
+    padding: 0 0 30rpx 0rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .select-item {
+    width: 80%;
+    height: 88rpx;
+    line-height: 68rpx;
+    background: #f6f5f8;
+    opacity: 1;
+    border-radius: 40rpx;
+    text-align: center;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: #151521;
+    /* margin-right: 10rpx; */
+    margin-bottom: 32rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .selectedItem {
+    background: #ff5050;
+    color: #fff;
+    border: 1px solid #ff5050;
+  }
+  
+  .btnBox {
+    width: 100%;
+    /* height: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 90% !important;
+    height: 88rpx;
+    background: #FF3B3B;
+    opacity: 1;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    opacity: 1;
+    border-radius: 48rpx;
+    border: none;
+    outline: none;
+    position: absolute;
+    bottom: 50rpx;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

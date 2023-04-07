@@ -1,0 +1,36 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/myPage/myPage",
+        "pages/startPages/index",
+        "pages/oneScoreOneRank/index",
+        "pages/fillApplication/fillApplication",
+        "pages/school_page/school_page"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTitleText": "高考志愿通",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": false,
+        "backgroundColor": "#efefef",
+        "onReachBottomDistance": 50
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "pages/main.png",
+                "text": "主页"
+            },
+            {
+                "pagePath": "pages/myPage/myPage",
+                "iconPath": "pages/my.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2",
+    "lazyCodeLoading": "requiredComponents"
+}

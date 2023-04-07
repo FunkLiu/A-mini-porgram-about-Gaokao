@@ -1,0 +1,82 @@
+<!--这里就会模拟志愿的填报了-->
+<view class = "top_item" style="height:{{navHeight}}px; background:#ffffff; position: sticky; top:0rpx">
+  <view class="title">
+      <view class="title_item">{{show_infor}}</view>
+  </view>
+
+  <view class="head">
+          <!--
+          <view>
+              <button class="head_item" catchtap="changeRange2">大学位置</button>
+              弹框 
+              <dialogA id='dialog' catchtouchmove="preventTouchMove" bind:customEventHandler="customEvent"></dialogA>
+          </view>
+          -->
+      <view class="head_item" bindtap="showModal" data-show_arr="school_areas"><text>院校位置</text><icon class="arrow"></icon></view>
+      <view class="ring"></view>
+      <view class="head_item" bindtap="showModal" data-show_arr="school_special"><text>大学特色</text><icon class="arrow"></icon></view>
+      <view class="ring"></view>
+      <view class="head_item" bindtap="showModal" data-show_arr="school_nature"><text>办学性质</text><icon class="arrow"></icon></view>
+      <view class="ring"></view>
+      <view class="head_item" bindtap="showModal" data-show_arr="school_type"><text>大学类型</text><icon class="arrow"></icon></view>
+  </view>
+</view>
+    
+  <!-- modal -->
+  <view class="modal modal-bottom-dialog" hidden="{{hideFlag}}">
+    <view class="modal-cancel" bindtap="hideModalAndReset"></view>
+    <view class="bottom-dialog-body bottom-positon" animation="{{animationData}}">
+      <!-- -->
+      <view class='up_select_arr'>
+        <scroll-view class='up_select_arr_left' scroll-y>
+          <view class="up_select_arr_left_infor" wx:for="{{put_up}}" wx:key="id" bindtap="choose_left" data-put_up_righgt_index="{{item.id}}">
+            <view class="{{index==put_up_righgt_index?'word_choosed':'word_not_choosed'}}">{{item.name}}</view>
+          </view>
+        </scroll-view>
+        <view class="ring"></view>
+        <view class="up_select_arr_mid"></view>
+        <scroll-view class='up_select_arr_right' scroll-y>
+          <checkbox-group>
+            <checkbox class="up_select_arr_right_infor" wx:for="{{put_up[put_up_righgt_index].children}}" wx:key="id" data-index="{{index}}" checked="{{item.checked}}" value="{{item.id}}"  bindtap="get_right_index">
+            {{item.name}}
+            </checkbox>
+          </checkbox-group>
+        </scroll-view>
+      </view>
+      <view class='bottom_part'>
+        <view class="bottom_left" bindtap="reset_check_box">
+          <text style="color: rgb(121, 186, 212);">重置</text>
+        </view>
+        <view class="ring"></view>
+        <view class="bottom_right" bindtap="get_key_word_and_search">
+          <text>确定</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+<scroll-view  class="arr_infor" wx:for="{{school_arr}}" wx:key="item">
+  <view display: inline-block; class="item" id="{{item.id}}">
+    <view class='img' data-index="{{index}}" bindtap="navigate_to_school">
+      <!-- img -->
+      <image src="{{base_url}}{{item.school_id}}{{file_tail}}" style="width:100px;height:100px;"></image>
+    </view>
+    <view class="school_name" data-index="{{index}}" bindtap="navigate_to_school">
+      <view class="position">
+        {{item.name}}
+      </view>
+      <view class="city_name">
+        {{item.city_name}}
+      </view>
+      <view class="nature_type_name">
+        {{item.nature_name}} {{item.type_name}}
+      </view>
+      <view class="enroll_infor">
+        {{item.province_score_min[province_id].year}}年最低 {{item.province_score_min[province_id].min}}分 
+      </view>
+    </view>
+  </view>
+</scroll-view>
+ 

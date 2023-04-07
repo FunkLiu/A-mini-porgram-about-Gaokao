@@ -1,0 +1,88 @@
+<!--pages/startPages/index.wxml-->
+
+<view wx:if="{{collecting}}" class="page__bd page__bd_spacing">
+  <view class="weui-cells__title">咨询类型</view>
+    <view class="weui-cell">
+      <radio-group>
+        <label><radio value="gaokao" bindtap="choose_gaokao">高考</radio></label>
+        <label><radio value="choose_subject" bindtap="choose_subject">分科</radio></label>
+      </radio-group>
+    </view>
+
+    <view wx:if="{{is_display}}"> 
+      <view wx:if="{{is_gaokao}}">
+        <view class="weui-cells__title">请依次填写相关信息</view>
+          <view class="weui-cells weui-cells_after-title">
+            <form>
+ 
+              <picker bindchange="province_choose" mode="selector" value="{{province_index}}" range="{{province_array}}">
+                <view class="weui-cell weui-cell_picker">
+                  <view class="weui-cell__hd">
+                    <view class="weui-label">省份: {{province_array[province_index]}}\n</view>
+                  </view>
+                  </view>
+              </picker>
+
+              <view class="weui-cell weui-cell_radio">
+                <view >高考类型: </view>
+                <radio-group calss="radio-group" bindchange="type_explain">
+                  <label class="" wx:for="{{province_type}}" wx:key="id">
+                      <radio value="{{item.id}}" checked="{{item.checked}}"> {{item.name}} </radio>
+                  </label>
+                </radio-group>
+              </view>
+
+              <view wx:if="{{show_subject != null}}"> 
+                <view class="weui-cell">可选科目:</view>
+                <checkbox-group bindchange="subject_explain_gaokao">
+                  <label class="weui-cell weui-check__label" wx:for="{{show_subject}}" wx:key="subject">
+                    <view class="weui-cell__hd">
+                      <checkbox value="{{item.subject}}" checked="{{item.checked}}"/>
+                    </view>
+                    <view class="weui-cell__bd">{{item.subject}}</view>
+                  </label>
+                </checkbox-group>
+              </view>
+
+              <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                  <view class="weui-label">高考分数:</view>
+                </view>
+                <view class="weui-cell__bd" >
+                  <input class="weui-input" type="number" maxlength="3" placeholder="请输入高考分数{{show_limit}}" bindinput="score_to_rank" value="{{score}}"/>
+                </view>
+              </view>
+
+              <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                  <view class="weui-label">高考排名:</view>
+                </view>
+                <view class="weui-cell__bd" >
+                  <input class="weui-input" type="text" placeholder="{{rank}}" bindinput="input_rank"/>
+                </view>
+              </view>
+
+            </form>
+        </view>
+      </view>
+
+      <view wx:else="">
+        <view class="weui-cells__title">请依次填写相关信息</view>
+          <view class="weui-cells weui-cells_after-title">
+            <form>
+                
+              <picker bindchange="province_choose" mode="selector" value="{{province_index}}" range="{{province_array}}">
+                <view class="weui-cell weui-cell_picker">
+                  <view class="weui-cell__hd">
+                    <view class="weui-label">省份: {{province_array[province_index]}}</view>
+                  </view>
+                </view>
+              </picker>
+
+            </form>
+          </view>
+        </view>
+    <button bindtap="makeSure" type="primary">填写完毕</button>      
+    </view>
+</view>
+  

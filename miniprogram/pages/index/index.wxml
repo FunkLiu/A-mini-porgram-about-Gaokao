@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="img_container">
+  <image src="cloud://cloud1-1gwjkmjk039b98b8.636c-cloud1-1gwjkmjk039b98b8-1313046662/post/post_new.png" class="img_poster" mode="widthFix" style="width: 70%;"></image>
+</view>
+<view style="justify-content: center; display:flex;">
+<button bindtap="navigate_to_fillApplication" style="background-color: skyblue; margin: 10px;">高考志愿推荐</button>
+</view>
+<view style="justify-content: center; display:flex;">
+  <button bindtap="navigate_to_oneScoreOneRank" style="background-color: skyblue; margin: 10px;">高考一分一段</button>
+</view>

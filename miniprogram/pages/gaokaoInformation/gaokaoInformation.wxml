@@ -1,0 +1,5 @@
+<!--pages/gaokaoInformation/gaokaoInformation.wxml-->
+
+<view >
+  <button bindtap="navigate_to_oneScoreOneRank">高考一分一段</button>
+</view>

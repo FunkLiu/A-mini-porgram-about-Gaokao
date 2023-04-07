@@ -1,0 +1,71 @@
+/* pages/school_page.wxss */
+.up_intro_img_school{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+    .up_intro_img_school_left{
+        height: 70px;
+        width: 70px;
+        margin: 5px;
+    }
+    .up_intro_img_school_right{
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    
+    .up_intro_school_level{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+    }
+    .left_item{
+        width: 25%;
+    }
+    .right_item{
+        width: 70%;
+        display: flex;
+        text-align: right;
+    }
+    .key_word_block{
+        margin-left: 5px;
+        margin-right: 5px;
+        border: 10px;
+        border-radius: 4px;
+        background-color: skyblue;
+    }
+
+    .up_intro_school_area{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+    }
+
+.intro_school_content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.intro_school_basic{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.per_block{
+    width: 50%;
+    height: 10%;
+    margin: 5px;
+}
+
+
+
+

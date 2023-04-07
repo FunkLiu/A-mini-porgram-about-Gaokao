@@ -1,0 +1,60 @@
+<scroll-view scroll-y>
+    <view class="up_intro">
+        <view class="up_intro_img_school">
+            <view class="up_intro_img_school_left">
+                <image src="{{base_url}}{{school.school_id}}{{file_tail}}" style="width:70px;height:70px;"></image>
+            </view>
+            <view class="up_intro_img_school_right">
+                <view style="height: 10px;"></view>
+                <view style="font-size: 13pt; font-weight: 800;">{{school.name}}</view>
+                <view style="font-size: 11pt; font-weight: 300;">{{school.type_name}} · {{school.nature_name}}</view>
+            </view>
+        </view>
+        <view class="up_intro_school_level">
+            <view class="left_item" style="font-size: 12pt; font-weight: 300;">高校层次</view>
+            <view class="right_item" style="font-size: 11pt; flex-direction: row-reverse; display: flex;" >
+                <view wx:for="{{block_arr}}">
+                    <text class="key_word_block" wx:key="item">{{item.infor}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="up_intro_school_area">
+            <view class="left_item" style="font-size: 12pt; font-weight: 300;">学校位置</view>
+            <view class="right_item" style="flex-direction: row-reverse; display: flex;" >
+                <text style="margin-left: 5px; margin-right: 5px; font-size: 11pt; font-weight: 200;">{{school.province_name}} · {{school.city_name}}</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="intro_school_content">
+        <view style="display: flex; flex-direction: row;">
+            <view style="width: 35px; font-size: 12pt; font-weight: 300;">简介</view>
+            <text style="font-size: 8pt; font-weight: 300; text-align:end; margin-top: 4pt;">（详见官网）</text>
+        </view>
+        <view style="display: flex; flex-direction: row;">
+            <view style="width: 30px;"></view>
+            <text style="font-size: 11pt;">{{school.content}}……</text>
+        </view>
+    </view>
+
+    <view class="intro_school_basic">
+        <view style="width: 100%; display: flex; flex-direction: row;">
+            <view style="width: 70px; font-size: 12pt; font-weight: 300;">基本信息</view>
+        </view>
+        <view style="display: flex; width: 100%;">
+            <view class="per_block">
+                占地面积：{{school.area}}亩
+            </view>
+            <view class="per_block">
+                国家重点学科：{{school.special.length}}个
+            </view>
+            <view class="per_block">
+                博士点（一级）：{{school.num_doctor}}个
+            </view>
+            <view class="per_block">
+                从属部门：{{school.belong}}
+            </view>
+        </view>
+    </view>
+
+</scroll-view>

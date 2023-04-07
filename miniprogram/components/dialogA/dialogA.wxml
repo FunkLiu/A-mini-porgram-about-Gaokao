@@ -1,0 +1,23 @@
+<!--components/dialog/dialog.wxml-->
+
+<view class="half-screen" catchtouchmove="preventTouchMove">
+    <!--屏幕背景变暗的背景  -->
+    <view class="background_screen" catchtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <!--弹出框  -->
+    <view animation="{{animationData}}" class="attr_box" wx:if="{{showModalStatus}}">
+        <view class="dialog-box">
+            <view class="dialog-head">
+                <view class="dialog-title">商品类型</view>
+            </view>
+            <view class='dialog-content'>
+                <view class="select-box">
+                    <view wx:for="{{tabData.val}}" wx:key="index" class="select-item {{index==tabData.toValIndex?'selectedItem':''}}" data-dialogid="{{index}}" catchtap="getValueTap">{{item}}</view>
+                </view>
+                <view class="btnBox">
+                    <button class="btn" catchtap="hideModal">确认</button>
+                </view>
+            </view>
+
+        </view>
+    </view>
+</view>

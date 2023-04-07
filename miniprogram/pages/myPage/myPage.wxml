@@ -1,0 +1,99 @@
+<view class="container">
+    <view class="">
+        <block class="user_info">
+            <!--直接使用open-data展示用户图像,但是为了交互友好,应当获取权限-->
+            <view class="weui-cell__hd" style="width:50px; height:50px; border-radius:50%; overflow:hidden">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+            <view class="weui-cell__bd">
+                <open-data type="userNickName"></open-data>
+            </view>
+        </block>
+    </view>
+</view>
+
+
+<view wx:if="{{show_type == 0}}" class="container">
+
+    <view class="weui-cell" style="color: crimson;" >
+        请单击“更改信息”选择您的咨询类型
+    </view>
+
+</view>
+<view wx:if="{{show_type == 1}}" class="container">
+
+    <view class="province_name">
+        <view class="weui-cell" >
+            <view class="weui-cell__hd">
+                <view class="weui-label">所在省份:</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="weui-label">{{show_infor.province_name}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="province_type">
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <view class="weui-label">高考科类:</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="weui-label">{{show_infor.province_type}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view wx:if="{{show_infor.choose_subject != null}}" class="province_type">
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <view class="weui-label">选择科目:</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="weui-label">{{show_infor.choose_subject}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="score">
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <view class="weui-label">高考分数:</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="weui-label">{{show_infor.score}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="rank">
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                <view class="weui-label">高考排名:</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="weui-label">{{show_infor.rank}}</view>
+            </view>
+        </view>
+    </view>
+
+</view>
+<view wx:if="{{show_type == 2}}" class="container">
+
+    <view class="province_name">
+        <view class="weui-cell" >
+            <view class="weui-cell__hd">
+                <view class="weui-label">所在省份:</view>
+            </view>
+            <view class="weui-cell__bd">
+                <view class="weui-label">{{show_infor.province_name}}</view>
+            </view>
+        </view>
+    </view>
+    
+</view>
+
+
+
+    <button class="weui-button" bindtap="change_info" type="primary">更改信息</button>
+
