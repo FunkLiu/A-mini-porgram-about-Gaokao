@@ -75,7 +75,7 @@
         </mxCell>
         <mxCell id="xYb50iZ14-Q-GBws1bET-13" value="RPC: Done" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xYb50iZ14-Q-GBws1bET-10">
           <mxGeometry x="0.7205" y="1" relative="1" as="geometry">
-            <mxPoint x="159" y="31" as="offset" />
+            <mxPoint x="145" y="31" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xYb50iZ14-Q-GBws1bET-19" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;size=0.5;" vertex="1" parent="1">
